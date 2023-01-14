@@ -3,7 +3,6 @@
 #include <Arduino.h>
 #include <SPI.h>
 #include <MFRC522.h>
-// #include <RFID.h>
 #include <EEPROM.h>
 #include <LiquidCrystal_I2C.h>
 
@@ -21,8 +20,10 @@
 #define RST_PIN 6
 #define dysk1 16
 
-// RFID rfid(SS_PIN, RST_PIN);
-byte ssPins[] = {SS_1_PIN, SS_2_PIN};
+MFRC522 mfrc522(SS_PIN, RST_PIN); // Create MFRC522 instance.
+
+RFID rfid(SS_PIN, RST_PIN);
+// byte ssPins[] = {SS_1_PIN, SS_2_PIN};
 MFRC522 mfrc522[NR_OF_READERS]; // tworzenie instancji MFRC522.
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);
