@@ -64,10 +64,11 @@ boolean windowsCzyLinux;    // zmienna dla rozpoznawania czy włączony windows 
 //*******************************************//
 
 void pomiarNapiecia();
-void sterowanieDiodami();
+void sterowanieDiodami();               //test
 void naukaPilota();
 void odczytKarty();
 void zapisKarty();
+
 
 //*********** Ustawienia główne *************//
 //*******************************************//
